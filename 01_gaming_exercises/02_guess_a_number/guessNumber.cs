@@ -13,17 +13,34 @@ class GuessNumber {
 
     while (numGuess < maxGuess)
     {
+      Console.WriteLine("Secret Number: " + secretNumber);
       Console.WriteLine("Please guess an integer between 0 and 20.\n");
       guess = Convert.ToInt32(Console.ReadLine()); 
-      Console.WriteLine(guess);
+      Console.WriteLine("Guess" + guess);
+
       numGuess++;
+      if (guess < secretNumber)
+      {
+        Console.WriteLine("your guess is too low.\n");
+      }
+      else if (guess > secretNumber)
+      {
+        Console.WriteLine("your guess is too high.\n");
+      }
+      else
+      {
+        Console.WriteLine("You guessed correctly!\n");
+        break; // Keyword to immediately exit a loop.
+      }
+
+      if (numGuess >= maxGuess)
+      {
+        Console.WriteLine("You have lost the game.\nDisappointing.\n");
+      }
+
     }
-      // Allow the user to guess the number.
-      // Compare the guess to the secret number.
-      // If match, print win, if > or <, give a hint.
-      // +1 to numGuess
-      // Check if numGuess > maxGuesses.
-      // If true, print a "lose game" message, if false guess again.
+      
+      
 
 
 
