@@ -3,7 +3,7 @@ class Strings {
   static void Main() {
     // In C# ALL STRINGS MUST USE DOUBLE-QUOTES "  "
 
-    string geeting = "Hello, What's your name?\n";
+    string greeting = "Hello, What's your name?\n";
     string goodbye = "Bye bye.\n";
 
     // In C# strings are treated like an OBJECT that has properties and methods.
@@ -11,10 +11,10 @@ class Strings {
     // METHODS -- built in functions related to that object 
 
     // Length is an important property for strings.
-    Console.WriteLine(geeting.Length);
+    Console.WriteLine(greeting.Length);
     Console.WriteLine(goodbye.Length);
 
-    if (geeting.Length > goodbye.Length)
+    if (greeting.Length > goodbye.Length)
     {
       Console.WriteLine("The greeting has more characters than the goodbye.\n");
     }
@@ -25,11 +25,11 @@ class Strings {
     Console.WriteLine(greeting.ToLower()); // Make entire string lowercase
 
     // String Concatenation "Con-Cat-Uh-Nation"
-    string comboString = geeting + goodbye;
+    string comboString = greeting + goodbye;
     Console.WriteLine(comboString);
 
     // String Conactenation Method #2
-    string comboString2 = string.Concat(geeting, goodbye);
+    string comboString2 = string.Concat(greeting, goodbye);
     Console.WriteLine(comboString2);
 
     // String Interpolation -- Substituting variables into strings.
@@ -47,5 +47,18 @@ class Strings {
 
     // Where is it in my string?
     Console.WriteLine(greeting.IndexOf("y")); 
+
+    // Finding parts of a string
+    string fullName = "Billy Mays";
+
+    // What letter?
+    int lastInitial = fullName.IndexOf("M");
+
+    // Find the substring.
+    string lastName = fullName.Substring(lastInitial);
+
+    // Print it.
+    Console.WriteLine(lastName);
+
   }
 }
