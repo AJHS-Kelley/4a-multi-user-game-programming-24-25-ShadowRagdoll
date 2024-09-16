@@ -1,0 +1,81 @@
+using System;
+class rockPaperScissors {
+  static void Main() {
+    string playerName = "Test Player";
+    int playerScore;
+    int cpuScore;
+    string playerChoice;
+    int cpuChoice;
+
+    Console.WriteLine("What is your name?\n");
+    playerName = Console.ReadLine();
+    Console.WriteLine("Hello " + playerName + " welcome to rock paper scissors.\n");
+    Console.WriteLine("Rock beats Scissors, Scissors beats Paper, and Paper beats Rock. The winner scores a point. If each player picks the same no points are awarded. The first player to five points wins.\n");
+    playerScore = 0;
+    cpuScore = 0;
+    while (playerScore < 5 || cpuScore < 5)
+    {
+        Console.WriteLine("Your score:" + playerScore);
+        Console.WriteLine("CPU score:" + cpuScore);
+        Console.WriteLine("Rock? paper? or scissors?\n");
+        playerChoice = Console.ReadLine();
+        Console.WriteLine(playerChoice.ToLower());
+        Random rnd = new Random();
+        cpuChoice = rnd.Next(4);
+        if (playerChoice == "scissors" && cpuChoice == 1)
+        {
+            Console.WriteLine("The CPU won.\n");
+            cpuScore++;
+        }
+        else if (playerChoice == "scissors" && cpuChoice == 2)
+        {
+            Console.WriteLine("You won.\n");
+            playerScore++;
+        }
+        else if (playerChoice == "scissors" && cpuChoice == 3)
+        {
+            Console.WriteLine("It's a tie.\n");
+        }
+        else if (playerChoice == "paper" && cpuChoice == 3)
+        {
+            Console.WriteLine("The CPU won.\n");
+            cpuScore++;
+        }
+        else if (playerChoice == "paper" && cpuChoice == 1)
+        {
+            Console.WriteLine("You won.\n");
+            playerScore++;
+        }
+        else if (playerChoice == "paper" && cpuChoice == 2)
+        {
+            Console.WriteLine("It's a tie.\n");
+        }
+        else if (playerChoice == "rock" && cpuChoice == 2)
+        {
+            Console.WriteLine("The CPU won.\n");
+            cpuScore++;
+        }
+        else if (playerChoice == "rock" && cpuChoice == 3)
+        {
+            Console.WriteLine("You won.\n");
+            playerScore++;
+        }
+        else if (playerChoice == "rock" && cpuChoice == 1)
+        {
+            Console.WriteLine("It's a tie.\n");
+        }
+        else 
+        {
+            Console.WriteLine("ERROR.\n");
+        }
+        if (playerScore == 5)
+        {
+            Console.WriteLine("You won the whole game.\n");
+        }
+        else 
+        {
+            Console.WriteLine("The CPU won the whole game.\n");
+        }
+    }
+  }
+}
