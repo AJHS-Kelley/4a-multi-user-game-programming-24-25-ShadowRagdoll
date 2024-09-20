@@ -80,12 +80,17 @@ class rockPaperScissors {
         if (playerScore == 5)
         {
         Console.WriteLine("You won the whole game.\n");
+        break;
         }
-        else 
+        else if (cpuScore == 5)
         {
         Console.WriteLine("The CPU won the whole game.\n");
+        break;
+        }
+        else
+        {
+            continue;
         }
     }
-    
   }
 }
