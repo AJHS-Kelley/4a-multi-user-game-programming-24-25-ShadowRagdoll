@@ -16,66 +16,74 @@ class RPS {
     int loopReqs = 0; // Req / Reqs is universal abbrv. for REQUEST / REQUESTS 
     Console.WriteLine("How many loops do you need?\nType an INTEGER and press ENTER.\n");
     loopReqs = Convert.ToInt32(Console.ReadLine());
-
+    Random rnd = new Random();
     while (loopCount < loopReqs)
     {
-        Random rnd = new Random();
         cpuChoice = rnd.Next(3);
         playerChoice = rnd.Next(3);
         //Console.WriteLine(cpuChoice);
-        if (playerChoice == 0 && cpuChoice == 0)
+        if (playerChoice == 1 && cpuChoice == 0)
         {
-            //Console.WriteLine("You both choose rock.\n");
-            //Console.WriteLine("It's a tie.\n");
-            numDraws++;
-        }
-        else if (playerChoice == 1 && cpuChoice == 0)
-        {
-            //Console.WriteLine("Paper beats rock.\n");
-            //Console.WriteLine("You won a point.\n");
+            Console.WriteLine("Paper beats rock.\n");
+            Console.WriteLine("You won a point.\n");
             playerScore++;
+            //playerScore = playerScore + 1;
         }
         else if (playerChoice == 2 && cpuChoice == 0)
         {
-            //Console.WriteLine("Scissors loses to rock.\n");
-            //Console.WriteLine("The CPU won a point.\n");
+            Console.WriteLine("Scissors loses to rock.\n");
+            Console.WriteLine("The CPU won a point.\n");
             cpuScore++;
+            //cpuScore = cpuScore + 1;
         }
         else if (playerChoice == 0 && cpuChoice == 1)
         {
-            //Console.WriteLine("Rock loses to paper.\n");
-            //Console.WriteLine("The CPU won a point.\n");
+            Console.WriteLine("Rock loses to paper.\n");
+            Console.WriteLine("The CPU won a point.\n");
             cpuScore++;
-        }
-        else if (playerChoice == 1 && cpuChoice == 1)
-        {
-            //Console.WriteLine("You both choose paper.\n");
-            //Console.WriteLine("It's a tie.\n");
-            numDraws++;
+            //cpuScore = cpuScore + 1;
         }
         else if (playerChoice == 2 && cpuChoice == 1)
         {
-            //Console.WriteLine("Scissors beats paper.\n");
-            //Console.WriteLine("You won a point.\n");
+            Console.WriteLine("Scissors beats paper.\n");
+            Console.WriteLine("You won a point.\n");
             playerScore++;
+            //playerScore = playerScore + 1;
         }
         else if (playerChoice == 0 && cpuChoice == 2)
         {
-            //Console.WriteLine("Rock beats scissors.\n");
-            //Console.WriteLine("You won a point.\n");
+            Console.WriteLine("Rock beats scissors.\n");
+            Console.WriteLine("You won a point.\n");
             playerScore++;
+            //playerScore = playerScore + 1;
         }
         else if (playerChoice == 1 && cpuChoice == 2)
         {
-            //Console.WriteLine("Paper loses to scissors.\n");
-            //Console.WriteLine("The CPU won a point.\n");
+            Console.WriteLine("Paper loses to scissors.\n");
+            Console.WriteLine("The CPU won a point.\n");
             cpuScore++;
+            //cpuScore = cpuScore + 1;
+        }
+        else if (playerChoice == 0 && cpuChoice == 0)
+        {
+            Console.WriteLine("You both choose rock.\n");
+            Console.WriteLine("It's a tie.\n");
+            numDraws++;
+            //numDraws = numDraws + 1;
+        }
+        else if (playerChoice == 1 && cpuChoice == 1)
+        {
+            Console.WriteLine("You both choose paper.\n");
+            Console.WriteLine("It's a tie.\n");
+            numDraws++;
+            //numDraws = numDraws + 1;
         }
         else if (playerChoice == 2 && cpuChoice == 2)
         {
-            //Console.WriteLine("You both choose scissors.\n");
-            //Console.WriteLine("It's a tie.\n");
+            Console.WriteLine("You both choose scissors.\n");
+            Console.WriteLine("It's a tie.\n");
             numDraws++;
+            //numDraws = numDraws + 1;
         }
         else 
         {
