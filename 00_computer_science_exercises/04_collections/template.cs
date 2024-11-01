@@ -58,7 +58,25 @@ class Collections {
   // Console.WriteLine(breakfastFoods[99]); // Index Out of Bounds -- Accessing index that does not exist in the array.
    
   // testScores[0] = "99"; // Error Message "Cannot implicitly convert dataType to dataType"
-  // Trying to put incorrect data tyoe into the array.
+  // Trying to put incorrect data type into the array.
+
+  // COMMON ARRAY METHODS -- Ways to work with the array data.
+  // Sorting an Array
+  int[] intArr = {-25, 50, 68, 523, -1205, 99918582, -1, 55, 0, 124};
+  string[] zooAnimals = {"Rhino", "Zebra", "Elephant", "Moose", "Iguana", "Cat", "Dog", "Sheep", "Jellyfish", "Bird"};
+
+  Array.Sort(intArr);
+  Array.Sort(zooAnimals);
+  // Array.Sort will sort string arrays ALPHABETICALLY A-Z and numerical arrays from LEAST TO GREATEST
+  Console.WriteLine("The elements of each array are:\n");
+  Console.WriteLine("zooAnimals after Array.Sort(): \n" + String.Join(", ", zooAnimals));
+  Console.WriteLine(); // Print an empty line to the screen.
     
+  // Finding the MIN, MAX, and SUM for numerical arrays.
+  Console.WriteLine("The MINIMUM value for intArr is: " + intArr.Min());
+  Console.WriteLine("The MAXIMUM value for intArr is: " + intArr.Max());
+  Console.WriteLine("The SUM value for intArr is: " + intArr.Sum());
+  
+
   } // DO NOT DELETE EVER, 3 SPACES INDENTED FROM LEFT
 } // DO NOT DELETE EVER, ALWAYS TOUCHING LEFT MARGIN
