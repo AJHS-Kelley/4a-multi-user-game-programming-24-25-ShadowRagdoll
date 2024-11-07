@@ -3,7 +3,6 @@ using System;
 using System.Linq;
 using System.Collections;
 
-
 class Collections {
   static void Main() { // DO NOT DELETE!
 
@@ -18,9 +17,9 @@ class Collections {
   */
 
   // DECLARING AND DEFINING AN ARRAY
-  string[] breakfastFoods = {"Bacon", "Eggs", "Cold Pizza", "Capn' Crunch", "Gator Tail"};
-  int[] testScores = {0, 25, 15, 75, 99};
-  double[] GPA = {0.27D, 1.99D, 4.02D, 0.0D, 3.25D};
+  // string[] breakfastFoods = {"Bacon", "Eggs", "Cold Pizza", "Capn' Crunch", "Gator Tail"};
+  // int[] testScores = {0, 25, 15, 75, 99};
+  // double[] GPA = {0.27D, 1.99D, 4.02D, 0.0D, 3.25D};
 
   // Print Array Contents -- All Elements on Single Line
   // Console.WriteLine("The elements of each array are:\n");
@@ -62,21 +61,88 @@ class Collections {
 
   // COMMON ARRAY METHODS -- Ways to work with the array data.
   // Sorting an Array
-  int[] intArr = {-25, 50, 68, 523, -1205, 99918582, -1, 55, 0, 124};
-  string[] zooAnimals = {"Rhino", "Zebra", "Elephant", "Moose", "Iguana", "Cat", "Dog", "Sheep", "Jellyfish", "Bird"};
+  // int[] intArr = {-25, 50, 68, 523, -1205, 99918582, -1, 55, 0, 124};
+  // string[] zooAnimals = {"Rhino", "Zebra", "Elephant", "Moose", "Iguana", "Cat", "Dog", "Sheep", "Jellyfish", "Bird"};
 
-  Array.Sort(intArr);
-  Array.Sort(zooAnimals);
+  // Array.Sort(intArr);
+  // Array.Sort(zooAnimals);
   // Array.Sort will sort string arrays ALPHABETICALLY A-Z and numerical arrays from LEAST TO GREATEST
-  Console.WriteLine("The elements of each array are:\n");
-  Console.WriteLine("zooAnimals after Array.Sort(): \n" + String.Join(", ", zooAnimals));
-  Console.WriteLine(); // Print an empty line to the screen.
+  // Console.WriteLine("The elements of each array are:\n");
+  // Console.WriteLine("zooAnimals after Array.Sort(): \n" + String.Join(", ", zooAnimals));
+  // Console.WriteLine(); // Print an empty line to the screen.
     
   // Finding the MIN, MAX, and SUM for numerical arrays.
-  Console.WriteLine("The MINIMUM value for intArr is: " + intArr.Min());
-  Console.WriteLine("The MAXIMUM value for intArr is: " + intArr.Max());
-  Console.WriteLine("The SUM value for intArr is: " + intArr.Sum());
+  // Console.WriteLine("The MINIMUM value for intArr is: " + intArr.Min());
+  // Console.WriteLine("The MAXIMUM value for intArr is: " + intArr.Max());
+  // Console.WriteLine("The SUM value for intArr is: " + intArr.Sum());
   
+  // ArrayList --> Basically an array you can add/remove elements from.
+  var exampleArrList = new ArrayList(); // Create an new ArrayList.
+  // Adding elements to an ArrayList use .Add()
+  // .Add() puts the item at the END of the ArrayList
+  exampleArrList.Add(5);
+  exampleArrList.Add("Shrek 5: The Search for Donkey");
+  exampleArrList.Add(false);
+  exampleArrList.Add(1.25D);
+
+  // Create ArrayList with Values
+  var exampleArrList2 = new ArrayList()
+  {
+    -10, "Last Name", "Purple", false, 25.25D, 195000, 0.0D
+  };
+
+  // Console.WriteLine(exampleArrList[2]);
+  // Console.WriteLine(exampleArrList2[5]);
+
+  // Inserting to a specific position in the ArrayList
+  // Use .Insert(index, value)
+  // exampleArrList.Insert(3, "Ogres are like onions.\n");
+  // exampleArrList.Insert(0, -99);
+
+  // .Remove(value) removes the FIRST OCCURENCE of the item from the ArrayList.
+  var newList = new ArrayList()
+  {
+    -10, -10, 15, -25, -10, 25, 33, -25, 40
+  };
+  // Console.WriteLine(newList[0]);
+  // newList.Remove(-10);
+  // Console.WriteLine(newList[0]);
+
+  // Deleting based on index number.
+  // .RemoveAt(value) --> deletes the item at the specified index
+  // newList.RemoveAt(4);
+
+  // Delete the First Irem
+  // newList.RemoveAt(0);
+
+  // Delete the Last Item
+  // newList.RemoveAt(newList.Length - 1);
+
+  // Remove an entire range of elements.
+  // .RemoveRange(firstIndexToDelete, LastIndexToDelete)
+  // newList.RemoveRange(3, 8);
+
+  // Shortcut to Delete from one item through end of list.
+  // newList.RemoveRange(4, newList.Length - 1);
+
+  // Does the ArrayList contain a certain value
+  // .Contains(value) returns true if the list has the value, false otherwise.
+  var playerInventory = new ArrayList()
+    {
+     "Sword", "Shield", "Bazooka", "Life", "Death book", "Potato"
+    };
+
+  Console.WriteLine(playerInventory.Contains("Fishing Pole"));
+  Console.WriteLine(playerInventory.Contains("Sword"));
+
+  if (playerInventory.Contains("Blue Key"))
+  {
+    // Do Something
+  }
+
+
+
+
 
   } // DO NOT DELETE EVER, 3 SPACES INDENTED FROM LEFT
 } // DO NOT DELETE EVER, ALWAYS TOUCHING LEFT MARGIN
