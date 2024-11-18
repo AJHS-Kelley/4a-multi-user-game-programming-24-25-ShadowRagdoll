@@ -32,7 +32,35 @@ class MoreArrays {
         Console.WriteLine("Odd\n");
       }
   }
+
+  // MULTIDIMENSIONAL ARRAYS
+  // This class will only use 2 Dimensional Arrays.
+  int[,] nums = { {2, 4, 6}, {-1, 0, 1} };
+
+  // ACCESSING ELEMENTS IN 2D ARRAYS
+  Console.WriteLine(nums[0, 1]);
+  Console.WriteLine(nums[1, 1]);
   
+  // CHANGING ELEMENTS IN 2D ARRAYS
+  nums[1, 2] = 9001;
+  // CHANGE ANY ELEMENT FROM THE FIRST ARRAY
+  nums[0, 2] = 502;
+
+  // LOOPING THROUGH 2D ARRAYS -- EASY MODE
+  foreach (int i in nums)
+  {
+      Console.WriteLine(i);
+  }
+
+  // LOOPING THROUGH 2D ARRAYS -- HARD MODE
+  for (int i = 0; i < nums.GetLength(0); i++)
+  {
+      for (int j = 0; j < nums.GetLength(1); j++)
+      {
+        Console.WriteLine(nums[i, j]);
+      }
+  }
+
 
 
   } // DO NOT DELETE EVER, 3 SPACES INDENTED FROM LEFT
